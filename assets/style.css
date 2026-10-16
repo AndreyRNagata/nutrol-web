@@ -1,0 +1,212 @@
+:root {
+  --green: #39a925;
+  --green-dark: #2b6b1f;
+  --green-soft: #edf8e8;
+  --text: #111111;
+  --muted: #6b6b6b;
+  --border: #ececec;
+  --bg: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --green: #69cb3e;
+    --green-dark: #8ede6a;
+    --green-soft: #18261a;
+    --text: #f2f2f2;
+    --muted: #a3a3a3;
+    --border: #2a2a2a;
+    --bg: #0e0e0e;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+header {
+  border-bottom: 1px solid var(--border);
+}
+
+header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+header img {
+  display: block;
+  width: 120px;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  font-size: 14px;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a[aria-current='page'] {
+  color: var(--green);
+}
+
+main {
+  padding: 40px 0 64px;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 40px 0 8px;
+}
+
+h3 {
+  font-size: 16px;
+  margin: 24px 0 4px;
+}
+
+p,
+ul,
+ol {
+  margin: 0 0 14px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+a {
+  color: var(--green);
+}
+
+.updated {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.note {
+  background: var(--green-soft);
+  border-left: 3px solid var(--green);
+  border-radius: 6px;
+  padding: 14px 16px;
+  margin: 20px 0;
+}
+
+.note p:last-child {
+  margin-bottom: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0 18px;
+  font-size: 15px;
+}
+
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  font-weight: 600;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.hero {
+  padding: 32px 0 8px;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 520px;
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+  margin-top: 32px;
+}
+
+.links a {
+  display: block;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.links a span {
+  display: block;
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.links a:hover {
+  border-color: var(--green);
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 14px;
+  padding: 24px 0 40px;
+}
+
+@media (max-width: 520px) {
+  header .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  h1,
+  .hero h1 {
+    font-size: 28px;
+  }
+}
