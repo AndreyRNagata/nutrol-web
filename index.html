@@ -3,38 +3,339 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nutrol</title>
-  <meta name="description" content="Nutrol: receitas, lembretes de refeição e lista de compras para acompanhar a sua alimentação, com a Nuia.">
+  <title>Nutrol · Sua alimentação, acompanhada de perto</title>
+  <meta name="description" content="Receitas para o seu objetivo, lembretes de refeição, lista de compras e a Nuia, sua assistente. O Nutrol acompanha a sua alimentação, um dia de cada vez.">
+  <meta name="theme-color" content="#39A925">
+  <meta property="og:title" content="Nutrol · Sua alimentação, acompanhada de perto">
+  <meta property="og:description" content="Receitas para o seu objetivo, lembretes, lista de compras e a Nuia, sua assistente.">
+  <meta property="og:type" content="website">
   <link rel="icon" href="/assets/favicon.png">
-  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/landing.css">
 </head>
 <body>
-  <header>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-2.99-.79-1.54.02-2.96.9-3.75 2.27-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.24-.02 2.02-1.12 2.77-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.39-.92-2.41-3.66zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.28z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="#34A853" d="M3.6 2.2c-.2.2-.3.6-.3 1v17.6c0 .4.1.8.3 1l9.8-9.8z"/><path fill="#FBBC05" d="m16.7 15.3-3.3-3.3 3.3-3.3 3.9 2.2c1.1.6 1.1 1.6 0 2.2z"/><path fill="#EA4335" d="M16.7 15.3 13.4 12l-9.8 9.8c.4.4 1 .4 1.7 0z"/><path fill="#4285F4" d="M16.7 8.7 5.3 2.2c-.7-.4-1.3-.4-1.7 0l9.8 9.8z"/></symbol>
+  </svg>
+
+  <!-- Navegação -->
+  <header class="nav" id="nav">
     <div class="wrap">
-      <a href="/"><img src="/assets/logo.svg" alt="Nutrol" width="120" height="37"></a>
-      <nav>
-        <a href="/privacidade">Privacidade</a>
-        <a href="/termos">Termos</a>
-        <a href="/excluir-conta">Excluir conta</a>
+      <a class="nav-logo" href="/" aria-label="Nutrol, página inicial"><img src="/assets/logo.svg" alt="Nutrol" width="116" height="36"></a>
+      <nav class="nav-links" aria-label="Seções">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#nuia">Nuia</a>
       </nav>
+      <div class="nav-cta">
+        <a class="store sm" href="#baixar"><svg aria-hidden="true"><use href="#i-apple"/></svg><span><small>Em breve na</small><strong>App Store</strong></span></a>
+        <a class="store sm" href="#baixar"><svg aria-hidden="true"><use href="#i-play"/></svg><span><small>Em breve no</small><strong>Google Play</strong></span></a>
+      </div>
     </div>
   </header>
 
-  <main class="wrap">
+  <main>
+    <!-- Hero -->
     <section class="hero">
-      <h1>Comer bem, um dia de cada vez.</h1>
-      <p>O Nutrol acompanha a sua alimentação com sugestões de receitas para o seu objetivo, lembretes de refeição e lista de compras. E a Nuia, sua assistente, tira dúvidas do dia a dia.</p>
+      <div class="wrap">
+        <div>
+          <span class="pill"><span class="pill-dot">✦</span> Com a Nuia, sua assistente</span>
+          <h1>Comer bem fica mais fácil <em>com companhia</em>.</h1>
+          <p class="hero-sub">Receitas pensadas para o seu objetivo, lembretes na hora certa e lista de compras pronta. O Nutrol acompanha a sua alimentação, um dia de cada vez.</p>
+          <div class="hero-ctas">
+            <a class="store" href="#baixar"><svg aria-hidden="true"><use href="#i-apple"/></svg><span><small>Em breve na</small><strong>App Store</strong></span></a>
+            <a class="store" href="#baixar"><svg aria-hidden="true"><use href="#i-play"/></svg><span><small>Em breve no</small><strong>Google Play</strong></span></a>
+          </div>
+          <p class="hero-note">Grátis para começar · Sem precisar criar senha</p>
+        </div>
+
+        <div class="phone-stage">
+          <div class="phone" role="img" aria-label="Tela Hoje do app Nutrol: 730 kcal restantes, macros do dia, refeições com horários e copos de água">
+            <div class="phone-screen" aria-hidden="true">
+              <div class="app-head"><b>Hoje</b><span class="streak">🔥 7</span></div>
+
+              <div class="card kcal">
+                <div class="ring">
+                  <svg viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="#F4F4F4" stroke-width="10"/>
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="#39A925" stroke-width="10" stroke-linecap="round" stroke-dasharray="251.3" stroke-dashoffset="99"/>
+                  </svg>
+                  <div class="ring-label"><b>730</b><span>kcal restantes</span></div>
+                </div>
+                <div class="macros">
+                  <div class="macro">Proteína <b>78/120 g</b><div class="bar"><i style="width:65%;background:var(--protein)"></i></div></div>
+                  <div class="macro">Carbo <b>130/210 g</b><div class="bar"><i style="width:62%;background:var(--carbs)"></i></div></div>
+                  <div class="macro">Gorduras <b>34/60 g</b><div class="bar"><i style="width:57%;background:var(--fat)"></i></div></div>
+                </div>
+              </div>
+
+              <div class="card">
+                <p class="meals-title">Refeições de hoje</p>
+                <div class="meal"><span class="meal-ico">🥞</span><div class="meal-txt"><small>Café da manhã · 07:30</small><span>Panqueca de banana e aveia</span></div><span class="check on">✓</span></div>
+                <div class="meal"><span class="meal-ico">🍗</span><div class="meal-txt"><small>Almoço · 12:30</small><span>Frango grelhado com batata-doce</span></div><span class="check on">✓</span></div>
+                <div class="meal"><span class="meal-ico">🥣</span><div class="meal-txt"><small>Lanche · 16:00</small><span>Iogurte com granola e morangos</span></div><span class="check on">✓</span></div>
+                <div class="meal"><span class="meal-ico">🐟</span><div class="meal-txt"><small>Jantar · 19:30</small><span>Salmão com arroz integral</span></div><span class="check"></span></div>
+              </div>
+
+              <div class="card water">
+                <div><b>Água</b><br><span style="color:var(--muted);font-size:10.5px">1,25 de 2 L</span></div>
+                <div class="cups"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="float f1" aria-hidden="true">
+            <span class="float-ico" style="background:#FFF3E6">🔥</span>
+            <div><b>7 dias seguidos!</b><small>Seu foguinho está aceso</small></div>
+          </div>
+          <div class="float f2" aria-hidden="true">
+            <span class="float-ico" style="background:var(--green-soft)">⏰</span>
+            <div><b>Hora do jantar</b><small>Salmão com arroz integral · 19:30</small></div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <ul class="links">
-      <li><a href="/privacidade">Política de Privacidade <span>Quais dados o app usa, por quê e como você controla.</span></a></li>
-      <li style="margin-top:12px"><a href="/termos">Termos de Uso <span>As regras para usar o Nutrol.</span></a></li>
-      <li style="margin-top:12px"><a href="/excluir-conta">Excluir conta e dados <span>Como apagar a sua conta e tudo o que está nela.</span></a></li>
-    </ul>
+    <!-- Como funciona -->
+    <section class="section" id="como-funciona" style="padding-top:48px">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Como funciona</span>
+          <h2>Seu plano em três passos</h2>
+          <p>Sem planilha, sem pesar comida, sem complicação.</p>
+        </div>
+        <div class="steps">
+          <article class="step reveal">
+            <div class="step-num">1</div>
+            <h3>Conte sobre você</h3>
+            <p>Seu objetivo, seu jeito de comer, quantas refeições faz e o que prefere evitar. Leva só alguns minutos.</p>
+          </article>
+          <article class="step reveal">
+            <div class="step-num">2</div>
+            <h3>Receba sugestões</h3>
+            <p>O Nutrol calcula metas diárias e monta um dia de refeições com receitas que combinam com você.</p>
+          </article>
+          <article class="step reveal">
+            <div class="step-num">3</div>
+            <h3>Acompanhe o seu dia</h3>
+            <p>Marque o que comeu, beba água, acenda o foguinho e veja quanto falta para a meta.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Receitas -->
+    <section class="recipes" aria-labelledby="receitas-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Receitas</span>
+          <h2 id="receitas-title">Comida de verdade, para o seu objetivo</h2>
+          <p>Do café da manhã ao jantar, com calorias e macros calculados. Não gostou? Troque a receita ou um ingrediente.</p>
+        </div>
+      </div>
+      <div class="marquee" aria-hidden="true">
+        <div class="track">
+          <div class="chip"><span class="chip-ico">🥞</span><div><b>Panqueca de banana e aveia</b><small>Café da manhã</small></div></div>
+          <div class="chip"><span class="chip-ico">🍓</span><div><b>Overnight oats com frutas vermelhas</b><small>Café da manhã</small></div></div>
+          <div class="chip"><span class="chip-ico">🥑</span><div><b>Ovos mexidos com torrada e abacate</b><small>Café da manhã</small></div></div>
+          <div class="chip"><span class="chip-ico">🧀</span><div><b>Tapioca com queijo e tomate</b><small>Café da manhã</small></div></div>
+          <div class="chip"><span class="chip-ico">🍗</span><div><b>Frango grelhado com batata-doce e brócolis</b><small>Almoço</small></div></div>
+        </div>
+        <div class="track">
+          <div class="chip"><span class="chip-ico">🥞</span><div><b>Panqueca de banana e aveia</b><small>Café da manhã</small></div></div>
+          <div class="chip"><span class="chip-ico">🍓</span><div><b>Overnight oats com frutas vermelhas</b><small>Café da manhã</small></div></div>
+          <div class="chip"><span class="chip-ico">🥑</span><div><b>Ovos mexidos com torrada e abacate</b><small>Café da manhã</small></div></div>
+          <div class="chip"><span class="chip-ico">🧀</span><div><b>Tapioca com queijo e tomate</b><small>Café da manhã</small></div></div>
+          <div class="chip"><span class="chip-ico">🍗</span><div><b>Frango grelhado com batata-doce e brócolis</b><small>Almoço</small></div></div>
+        </div>
+      </div>
+      <div class="marquee reverse" aria-hidden="true">
+        <div class="track">
+          <div class="chip"><span class="chip-ico">🐟</span><div><b>Salmão com arroz integral e abobrinha</b><small>Jantar</small></div></div>
+          <div class="chip"><span class="chip-ico">🥗</span><div><b>Bowl de grão-de-bico com quinoa</b><small>Almoço · vegano</small></div></div>
+          <div class="chip"><span class="chip-ico">🍛</span><div><b>Arroz, feijão e carne moída</b><small>Almoço</small></div></div>
+          <div class="chip"><span class="chip-ico">🥣</span><div><b>Iogurte com granola e morangos</b><small>Lanche</small></div></div>
+          <div class="chip"><span class="chip-ico">🥕</span><div><b>Homus com palitos de cenoura</b><small>Lanche · vegano</small></div></div>
+        </div>
+        <div class="track">
+          <div class="chip"><span class="chip-ico">🐟</span><div><b>Salmão com arroz integral e abobrinha</b><small>Jantar</small></div></div>
+          <div class="chip"><span class="chip-ico">🥗</span><div><b>Bowl de grão-de-bico com quinoa</b><small>Almoço · vegano</small></div></div>
+          <div class="chip"><span class="chip-ico">🍛</span><div><b>Arroz, feijão e carne moída</b><small>Almoço</small></div></div>
+          <div class="chip"><span class="chip-ico">🥣</span><div><b>Iogurte com granola e morangos</b><small>Lanche</small></div></div>
+          <div class="chip"><span class="chip-ico">🥕</span><div><b>Homus com palitos de cenoura</b><small>Lanche · vegano</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recursos -->
+    <section class="section" id="recursos">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Recursos</span>
+          <h2>Tudo o que você precisa para seguir no ritmo</h2>
+          <p>Do planejamento à feira, o Nutrol cuida dos detalhes para você focar no que importa.</p>
+        </div>
+
+        <div class="bento">
+          <article class="tile wide green reveal">
+            <div class="tile-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></div>
+            <h3>Lembretes de refeição e água</h3>
+            <p>Escolha o horário de cada refeição e receba um aviso na hora. Para a água, defina de quanto em quanto tempo.</p>
+            <div class="mini-list" aria-hidden="true">
+              <div class="mini-row"><span>Café da manhã <small>· 07:30</small></span><span class="toggle"></span></div>
+              <div class="mini-row"><span>Almoço <small>· 12:30</small></span><span class="toggle"></span></div>
+              <div class="mini-row"><span>Água <small>· a cada 2 h</small></span><span class="toggle"></span></div>
+            </div>
+          </article>
+
+          <article class="tile wide reveal">
+            <div class="tile-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg></div>
+            <h3>Lista de compras pronta</h3>
+            <p>Gerada a partir das suas receitas, para a semana ou para o período que você escolher. É só marcar no mercado.</p>
+            <div class="mini-list" aria-hidden="true">
+              <div class="mini-row done"><span>Peito de frango <small>· 600 g</small></span><span class="box on"></span></div>
+              <div class="mini-row done"><span>Batata-doce <small>· 4 un</small></span><span class="box on"></span></div>
+              <div class="mini-row"><span>Aveia em flocos <small>· 200 g</small></span><span class="box"></span></div>
+            </div>
+          </article>
+
+          <article class="tile reveal">
+            <div class="tile-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg></div>
+            <h3>Trocas de ingredientes</h3>
+            <p>Não gosta de um ingrediente? Troque por outro parecido e o Nutrol ajusta a receita.</p>
+          </article>
+
+          <article class="tile reveal">
+            <div class="tile-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
+            <h3>Foguinho de sequência</h3>
+            <p>Cada dia no plano acende o foguinho. Uma motivação leve para criar o hábito.</p>
+          </article>
+
+          <article class="tile reveal">
+            <div class="tile-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></div>
+            <h3>Fotos dos seus pratos</h3>
+            <p>Fotografe o que você preparou e guarde junto da receita. As fotos ficam só no seu celular.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nuia -->
+    <section class="nuia" id="nuia">
+      <div class="wrap">
+        <div class="reveal">
+          <div class="section-head">
+            <span class="eyebrow">Conheça a Nuia</span>
+            <h2>Uma assistente que entende o seu dia</h2>
+            <p>Bateu vontade de um doce? Comeu fora do plano? Pergunte para a Nuia. Ela olha o seu dia e sugere o próximo passo, sem culpa.</p>
+          </div>
+          <ul class="nuia-points">
+            <li>Sabe quanto ainda falta para a sua meta de hoje</li>
+            <li>Sugere lanches e trocas que combinam com o seu jeito de comer</li>
+            <li>Lembra de beber água e de bater a proteína do dia</li>
+          </ul>
+        </div>
+
+        <div class="chat reveal" role="img" aria-label="Exemplo de conversa: a pessoa pergunta se pode comer pizza e a Nuia mostra quantas calorias ainda restam no dia e sugere como encaixar">
+          <div class="chat-head" aria-hidden="true">
+            <span class="avatar"><img src="/assets/leaf.svg" alt="" width="22" height="21"></span>
+            <div><b>Nuia</b><small>● online</small></div>
+          </div>
+          <div class="msgs" aria-hidden="true">
+            <div class="msg me">Posso comer uma fatia de pizza hoje? 🍕</div>
+            <div class="msg nuia">Pode, sim! 😊 Hoje ainda restam 730 kcal e uma fatia de pizza tem cerca de 285 kcal. Se for comer, diminua um pouco o jantar e capriche na salada.</div>
+            <div class="msg me">E se bater fome à tarde?</div>
+            <div class="msg nuia">Que tal iogurte com granola e morangos (280 kcal) ou homus com palitos de cenoura (190 kcal)?</div>
+            <div class="msg nuia typing"><i></i><i></i><i></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section class="section">
+      <div class="wrap">
+        <div class="perks">
+          <div class="perk reveal">
+            <div class="perk-ico">⏱️</div>
+            <h3>Menos tempo pensando</h3>
+            <p>O cardápio do dia já vem pronto. Você só decide se quer trocar algo.</p>
+          </div>
+          <div class="perk reveal">
+            <div class="perk-ico">🥦</div>
+            <h3>Do seu jeito</h3>
+            <p>Tradicional, pescetariano, vegetariano ou vegano, respeitando o que você evita.</p>
+          </div>
+          <div class="perk reveal">
+            <div class="perk-ico">💚</div>
+            <h3>Sem culpa</h3>
+            <p>Saiu do plano? Tudo bem. O Nutrol mostra como seguir a partir da próxima refeição.</p>
+          </div>
+        </div>
+
+        <aside class="notice reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <p style="margin:0"><b>O Nutrol acompanha e sugere, não prescreve.</b> As sugestões do app e da Nuia não substituem nutricionista ou médico. Se você tem alguma condição de saúde, está grávida ou amamentando, procure um profissional antes de mudar sua alimentação.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="cta" id="baixar">
+      <div class="wrap">
+        <div class="cta-box reveal">
+          <img class="cta-leaf" src="/assets/leaf.svg" alt="" width="64" height="60">
+          <h2>Comece hoje a comer melhor, um dia de cada vez</h2>
+          <p>O Nutrol chega em breve para iPhone e Android.</p>
+          <div class="hero-ctas">
+            <a class="store light" href="#baixar"><svg aria-hidden="true"><use href="#i-apple"/></svg><span><small>Em breve na</small><strong>App Store</strong></span></a>
+            <a class="store light" href="#baixar"><svg aria-hidden="true"><use href="#i-play"/></svg><span><small>Em breve no</small><strong>Google Play</strong></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <div class="wrap">Nutrol · Contato: <a href="mailto:[[EMAIL]]">[[EMAIL]]</a></div>
+  <footer class="foot">
+    <div class="wrap">
+      <img src="/assets/logo.svg" alt="Nutrol" width="96" height="30">
+      <nav aria-label="Links legais">
+        <a href="/privacidade">Privacidade</a>
+        <a href="/termos">Termos de uso</a>
+        <a href="/excluir-conta">Excluir conta</a>
+        <a href="mailto:[[EMAIL]]">Contato</a>
+      </nav>
+      <span>© 2026 Nutrol</span>
+    </div>
   </footer>
+
+  <script>
+    (() => {
+      const nav = document.getElementById('nav');
+      const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      const items = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        items.forEach((el) => el.classList.add('in'));
+        return;
+      }
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          });
+        },
+        { threshold: 0.12, rootMargin: '0px 0px -40px 0px' },
+      );
+      items.forEach((el) => io.observe(el));
+    })();
+  </script>
 </body>
 </html>
